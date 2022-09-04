@@ -9,11 +9,12 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:gravity="center_vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="80dp"
+            android:layout_weight="1"
             android:orientation="vertical">
 
             <TextView
@@ -26,7 +27,8 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="59dp"
+                android:layout_weight="1"
                 android:backgroundTint="#DFDCDC"
                 android:orientation="horizontal">
 
@@ -51,5 +53,25 @@
             </LinearLayout>
 
         </LinearLayout>
+
+        <ImageView
+            android:id="@+id/btn_eliminar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#B61717"
+            android:padding="5dp"
+            app:srcCompat="@drawable/ic_delete" />
+
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/btn_editar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#10259C"
+            android:padding="5dp"
+            app:srcCompat="@drawable/ic_edit" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>

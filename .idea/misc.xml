@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/59399/Documents/ISTA/Cuarto Ciclo/Firebase/test/app/src/main/res/drawable/ic_delete.xml" value="0.1635" />
+        <entry key="..\:/Users/59399/Documents/ISTA/Cuarto Ciclo/Firebase/test/app/src/main/res/drawable/ic_edit.xml" value="0.1635" />
+        <entry key="..\:/Users/59399/Documents/ISTA/Cuarto Ciclo/Firebase/test/app/src/main/res/layout/view_pet_single.xml" value="0.25679347826086957" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Firebase/app/src/main/res/layout/activity_craete_pet.xml" value="0.18" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Firebase/app/src/main/res/layout/activity_main.xml" value="0.16485507246376813" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Firebase/app/src/main/res/layout/fragment_create_pet.xml" value="0.1859375" />
