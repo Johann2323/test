@@ -34,7 +34,7 @@ Button btn_add, btn_add_fragment;
         Query query = mFirestore.collection("pet");
         FirestoreRecyclerOptions<Pet> firestoreRecyclerOptions = new FirestoreRecyclerOptions.Builder<Pet>().setQuery(query, Pet.class).build();
 
-        mAdapter = new PetAdapter(firestoreRecyclerOptions, this);
+        mAdapter = new PetAdapter(firestoreRecyclerOptions, this, getSupportFragmentManager());
         mAdapter.notifyDataSetChanged();
         mRecycler.setAdapter(mAdapter);
 

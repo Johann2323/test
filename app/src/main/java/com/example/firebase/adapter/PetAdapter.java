@@ -2,6 +2,7 @@ package com.example.firebase.adapter;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.firebase.CraetePetActivity;
@@ -26,15 +29,17 @@ import com.google.firebase.firestore.FirebaseFirestore;
 public class PetAdapter extends FirestoreRecyclerAdapter<Pet,PetAdapter.viewHolder> {
     private FirebaseFirestore mFirestore = FirebaseFirestore.getInstance();
     Activity activity;
+    FragmentManager frag;
     /**
      * Create a new RecyclerView adapter that listens to a Firestore Query.  See {@link
      * FirestoreRecyclerOptions} for configuration options.
      *
      * @param options
      */
-    public PetAdapter(@NonNull FirestoreRecyclerOptions<Pet> options, Activity activity) {
+    public PetAdapter(@NonNull FirestoreRecyclerOptions<Pet> options, Activity activity, FragmentManager frag) {
         super(options);
         this.activity = activity;
+        this.frag=frag;
     }
 
     @Override
@@ -51,7 +56,15 @@ public class PetAdapter extends FirestoreRecyclerAdapter<Pet,PetAdapter.viewHold
             public void onClick(View view) {
                 Intent i = new Intent(activity, CraetePetActivity.class);
                 i.putExtra("id_pet", id);
-                activity.startActivity(i);
+                //activity.startActivity(i);
+
+                //Enviar datos por el fragmento
+                CreatePetFragment createPetFragment = new CreatePetFragment();
+                Bundle bundle = new Bundle();
+                bundle.putString("id_pet", id);
+                createPetFragment.setArguments(bundle);
+                createPetFragment.show(frag, "Fragmento Abierto");
+
             }
         });
 
