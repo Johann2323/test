@@ -66,6 +66,8 @@ public class CraetePetActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         storageReference = FirebaseStorage.getInstance().getReference();
 
+
+
         linearLayout_image_btn = findViewById(R.id.images_btn);
         name = findViewById(R.id.nombre);
         age = findViewById(R.id.edad);
