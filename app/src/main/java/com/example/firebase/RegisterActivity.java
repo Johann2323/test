@@ -86,4 +86,9 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
     }
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return false;
+    }
 }

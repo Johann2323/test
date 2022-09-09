@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -28,7 +29,7 @@ public class CreatePetFragment extends DialogFragment {
     Button btn_add;
     EditText name,age,color;
     private FirebaseFirestore mfirestore;
-
+    private FirebaseAuth mAuth;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -43,6 +44,7 @@ public class CreatePetFragment extends DialogFragment {
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_create_pet, container, false);
         mfirestore = FirebaseFirestore.getInstance();
+        mAuth = FirebaseAuth.getInstance();
 
         name = v.findViewById(R.id.nombre);
         age = v.findViewById(R.id.edad);
@@ -96,9 +98,6 @@ public class CreatePetFragment extends DialogFragment {
                 }
             });
         }
-
-
-
         return  v;
     }
 

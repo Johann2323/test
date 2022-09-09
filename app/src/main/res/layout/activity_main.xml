@@ -20,17 +20,56 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <Button
-            android:id="@+id/btn_add"
+        <SearchView
+            android:id="@+id/search"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Agregar mascota" />
+            android:background="#FFFFFF"
+            android:backgroundTint="#FFFFFF"
+            android:queryHint="Buscar" />
 
         <Button
-            android:id="@+id/btn_add_fragment"
+            android:id="@+id/btn_close"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Agregar con fragment" />
+            android:backgroundTint="#FF401F"
+            android:text="cerrar sesión"
+            app:cornerRadius="50dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_add_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/purple_500"
+                android:text="Crear Usuario"
+                android:textSize="10sp"
+                app:cornerRadius="50dp" />
+
+            <Space
+                android:layout_width="15dp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btn_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/purple_700"
+                android:text="Agregar Mascota"
+                android:textSize="10sp"
+                app:cornerRadius="50dp" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerViewSingle"

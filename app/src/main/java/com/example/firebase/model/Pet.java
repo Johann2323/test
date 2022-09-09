@@ -1,13 +1,22 @@
 package com.example.firebase.model;
 
 public class Pet {
-    String name,age,color;
+    String name,age,color, photo;
     public Pet(){}
 
-    public Pet(String name, String age, String color) {
+    public Pet(String name, String age, String color, String photo) {
         this.name = name;
         this.age = age;
         this.color = color;
+        this.photo = photo;
+    }
+
+    public String getPhoto() {
+        return photo;
+    }
+
+    public void setPhoto(String photo) {
+        this.photo = photo;
     }
 
     public String getName() {
